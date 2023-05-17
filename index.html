@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css.css">
+
+
+</head>
+<body>
+<div>
+<h1>Procedural Music Generator<h1>
+
+<button id="play"style="	background-color: #004C7C;border: 0px;  width: 110px; font-size: 20px; height:50px;"
+onclick="sound();">Play</button>
+<input type="range" class="slider" id="slider" min="60" max="200" value="135"></input>
+<h3>BPM: <span id="bpm"></span></h3>
+</div>
+<h1></h1>
+<div class="string">
+<span class="fret">0</span>
+<span class="fret">1</span>
+<span class="fret">2</span>
+<span class="fret">3</span>
+<span class="fret">4</span>
+<span class="fret">5</span>
+<span class="fret">6</span>
+<span class="fret">7</span>
+<span class="fret">8</span>
+<span class="fret">9</span>
+<span class="fret">10</span>
+<span class="fret">11</span>
+<span class="fret">12</span>
+<span class="fret">13</span>
+<span class="fret">14</span>
+<span class="fret">15</span>
+<span class="fret">16</span>
+<span class="fret">17</span>
+<span class="fret">18</span>
+<span class="fret">19</span>
+<span class="fret">20</span>
+<span class="fret">21</span>
+<span class="fret">22</span>
+<span class="fret">23</span>
+<span class="fret">24</span>
+<span class="allownote hidden"></span>
+
+
+</div>
+<div class="string"id="6">
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="allownote"></span>
+
+</div >
+<div class="string"id="5">
+
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="allownote"></span>
+
+
+</div>
+<div class="string"id="4">
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="allownote"></span>
+
+
+</div>
+<div class="string"id="3">
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="allownote"></span>
+
+
+</div>
+<div class="string"id="2">
+
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="allownote"></span>
+
+
+</div>
+<div class="string"id="1">
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="note C#">C#</span>
+<span class="note D">D</span>
+<span class="note D#">D#</span>
+<span class="note E">E</span>
+<span class="note F">F</span>
+<span class="note F#">F#</span>
+<span class="note G">G</span>
+<span class="note G#">G#</span>
+<span class="note A">A</span>
+<span class="note A#">A#</span>
+<span class="note B">B</span>
+<span class="note C">C</span>
+<span class="allownote hidden"></span>
+</div>
+
+<div style="text-align:center; margin-top:-133px;">
+<input type="range" id="slider vertical max" min="0" max="5" value="5"class="slider vertical"></input>
+<h6></h6>
+<input type="range" id="slider vertical min" min="0" max="5" value="1"class="slider vertical"></input>
+</div>
+<div style="margin-top:133px"></div>
+
+
+<h1></h1>
+<div class="keybuttons">
+<button onclick="keychange(0)">C</button>
+<button onclick="keychange(1)">C#</button>
+<button onclick="keychange(2)">D</button>
+<button onclick="keychange(3)">D#</button>
+<button onclick="keychange(4)">E</button>
+<button onclick="keychange(5)">F</button>
+<button onclick="keychange(6)">F#</button>
+<button onclick="keychange(7)">G</button>
+<button onclick="keychange(8)">G#</button>
+<button onclick="keychange(9)">A</button>
+<button onclick="keychange(10)">A#</button>
+<button onclick="keychange(11)">B</button>
+</div>
+<h1></h1>
+<div class="keybuttons scalebuttons">
+<button onclick="scalechange(0)">Minor</button>
+<button onclick="scalechange(1)">Major</button>
+<button onclick="scalechange(2)">Pentatonic</button>
+<button onclick="scalechange(3)">Phrygian Dominant</button>
+<button onclick="scalechange(4)">Locrian</button>
+<button onclick="scalechange(5)">Harmonic Minor</button>
+<button onclick="scalechange(6)">Lydian</button>
+<button onclick="scalechange(7)">Mixolydian</button>
+<button onclick="scalechange(8)">Ultralocrian</button>
+<button onclick="scalechange(9)">Melodic Minor</button>
+<button onclick="scalechange(10)">Hirajoshi</button>
+<button onclick="scalechange(11)">Augmented</button>
+</div>
+<div class="keybuttons scalebuttons">
+<button onclick="scalechange(12)">Whole Tone</button>
+<button onclick="scalechange(13)">Diminished</button>
+<button onclick="scalechange(14)">Blues</button>
+<button onclick="scalechange(15)">Phrygian</button>
+<button onclick="scalechange(16)">Lydian Minor</button>
+<button onclick="scalechange(17)">Yo</button>
+<button onclick="scalechange(18)">a</button>
+<button onclick="scalechange(19)">a</button>
+<button onclick="scalechange(20)">a</button>
+<button onclick="scalechange(21)">a</button>
+<button onclick="scalechange(22)">a</button>
+<button onclick="scalechange(23)">Chromatic</button>
+
+</div>
+<h1></h1>
+<a download="tab.txt" href='#' id="link" onclick="downloadtab()">Download Tab</a>
+</body>
+</html>
+
+<script src="scripts.js"></script>
+<script src="cleanrhythm.js"></script>
